@@ -15,7 +15,9 @@ app.get("/api/fact", async (req, res) => {
 
         res.json(data)
     } catch (err) {
-        console.log(err)
+        console.error(err);
+        res.status(500).json({error: "failed to fetch random fact"})
+        
     }
 })
 
@@ -27,7 +29,8 @@ app.get("/api/today", async (req, res) => {
 
         res.json(data)
     } catch (err) {
-        console.log(err)
+        console.error(err)
+        res.status(500).json({error: "failed to fetch today's fact"})
     }
 })
 
