@@ -1,3 +1,5 @@
+import "../styles/FactCard.css"
+
 function FactCard({fact}) {
     return (
         <>
