@@ -1,0 +1,7 @@
+# get random useless fact
+GET https://uselessfacts.jsph.pl/api/v2/facts/random?language=en
+
+###
+
+# get today's useless fact
+GET https://uselessfacts.jsph.pl/api/v2/facts/today?language=en
