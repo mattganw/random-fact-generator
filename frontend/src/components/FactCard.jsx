@@ -1,7 +1,9 @@
-function FactCard() {
+function FactCard({fact}) {
     return (
         <>
-            FactCard component
+            <div className="card">
+                {fact.text}
+            </div>
         </>
     )
 }

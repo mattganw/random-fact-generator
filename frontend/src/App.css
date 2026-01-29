@@ -1,0 +1,6 @@
+body {
+    display: grid;
+    place-items: center;
+    margin: 0px;
+    height: 100vh;
+}

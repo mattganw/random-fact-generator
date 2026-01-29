@@ -39,7 +39,7 @@ function App() {
 
   return (
     <>
-      {fact ? fact.text : "No fact available"}
+      {fact ? <FactCard fact={fact}/> : "No fact available"}
     </>
   )
 }
