@@ -1,0 +1,23 @@
+.card {
+    background-color: var(--color-secondary);
+    height: 250px;
+    width: 600px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.fact-text {
+    margin: 0px;
+    color: var(--color-white);
+}
+
+.google-sans-fact {
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 0;
+}

@@ -1,6 +1,13 @@
+:root {
+    --color-primary: #1e223a;
+    --color-secondary: #625bc7;
+    --color-white: #f9f8fe;
+}
+
 body {
-    display: grid;
-    place-items: center;
     margin: 0px;
     height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--color-primary);
 }
