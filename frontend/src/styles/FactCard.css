@@ -31,7 +31,7 @@
 .card-footer {
     height: 40px;
     width: 100%;
-    background-color: red;
+    background-color: transparent;
     display: flex;
     place-items: center;
     justify-content: center;
@@ -64,6 +64,17 @@
     "GRAD" 0;
 }
 
+.google-sans-btn {
+  line-height: 1.0;
+  font-size: 1.0rem;
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 0;
+}
+
 .google-sans-h2 {
   line-height: 1.6;
   font-size: 1.6rem;
@@ -73,4 +84,25 @@
   font-style: normal;
   font-variation-settings:
     "GRAD" 0;
+}
+
+.new-fact-btn, .today-fact-btn {
+    display: flex;
+    place-items: center;
+    height: 100%;
+    width: auto;
+    gap: 4px;
+    color: white;
+    border: 0px;
+    border-radius: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.new-fact-btn {
+    background-color: #6d4c9c;
+}
+.today-fact-btn {
+    background-color: #3072e2;
 }
