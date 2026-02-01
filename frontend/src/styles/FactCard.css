@@ -1,8 +1,8 @@
 .card {
-    background-color: var(--color-secondary);
-    height: 260px;
+    background-color: #fff;
+    height: 400px;
     width: 600px;
-    border-radius: 14px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -10,18 +10,31 @@
     box-sizing: border-box;
 }
 
-.card-footer {
-    height: 36px;
+.card-header {
+    height: 40px;
     width: 100%;
-    background-color: var(--color-white);
+    background-color: red;
+    display: flex;
+    place-items: center;
+}
+
+.card-footer {
+    height: 40px;
+    width: 100%;
+    background-color: red;
+    display: flex;
+    place-items: center;
 }
 .fact-text {
     margin: 0px;
-    color: var(--color-white);
+    color: black;
+    overflow-y: auto;
+    flex: 1;
 }
 
 .google-sans-fact {
-  font-size: 24px;
+  line-height: 1.6;
+  font-size: 1.2rem;
   font-family: "Google Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
