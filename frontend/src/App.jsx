@@ -4,8 +4,7 @@ import FactCard from './components/FactCard.jsx'
 
 function App() {
 
-  const [randomFact, setRandomFact] = useState(null)
-  const [todayFact, setTodayFact] = useState(null)
+  const [fact, setFact] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
@@ -22,7 +21,7 @@ function App() {
       }
 
       const data = await response.json()
-      setRandomFact(data)
+      setFact(data)
 
     } catch(err) {
       setError(err)
@@ -45,7 +44,7 @@ function App() {
       }
 
       const data = await response.json();
-      setTodayFact(data)
+      setFact(data)
 
     } catch(err) {
       setError(err)
@@ -58,7 +57,6 @@ function App() {
 
   useEffect(() => {
     getRandomFact();
-    getTodayFact();
   }, [])
 
   if (loading) return <>Loading...</>
@@ -66,9 +64,9 @@ function App() {
 
   return (
     <>
-      {randomFact ? 
+      {fact ? 
         <FactCard 
-          fact={todayFact}
+          fact={fact}
           onGetNewFact={getRandomFact}
           onGetTodayFact={getTodayFact}
         /> 
