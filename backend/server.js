@@ -1,5 +1,6 @@
 import express from "express"
 import cors from "cors"
+import 'dotenv/config';
 
 const app = express();
 const PORT = 3000;
@@ -34,5 +35,5 @@ app.get("/api/today", async (req, res) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`)
+    console.log(`Server running on http://localhost:${PORT}`);
 })
