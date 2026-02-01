@@ -53,6 +53,10 @@
     padding-right: 4px;
 }
 
+.fact-content {
+    flex: 1
+}
+
 .google-sans-p {
   line-height: 1.6;
   font-size: 1.2rem;
@@ -106,3 +110,18 @@
 .today-fact-btn {
     background-color: #3072e2;
 }
+
+.fact-content {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fact-content.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fact-content.loading {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
