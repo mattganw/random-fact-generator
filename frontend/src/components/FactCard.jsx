@@ -2,7 +2,7 @@ import "../styles/FactCard.css"
 import LightbulbIcon from "./LightbulbIcon";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
-function FactCard({fact}) {
+function FactCard({fact, onGetNewFact, onGetTodayFact}) {
     return (
         <>
             <div className="card">
@@ -16,7 +16,10 @@ function FactCard({fact}) {
                     </div>
                 </div>
                 <p className="fact-text google-sans-p">{fact[0].fact}</p>
-                <div className="card-footer">Footer</div>
+                <div className="card-footer">
+                    <button onClick={onGetNewFact}>Get New Fact</button>
+                    <button onClick={onGetTodayFact}>Get Today's Fact</button>
+                </div>
             </div>
         </>
     )

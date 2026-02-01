@@ -66,7 +66,13 @@ function App() {
 
   return (
     <>
-      {randomFact ? <FactCard fact={randomFact}/> : "No fact available"}
+      {randomFact ? 
+        <FactCard 
+          fact={todayFact}
+          onGetNewFact={getRandomFact}
+          onGetTodayFact={getTodayFact}
+        /> 
+        : "No fact available"}
     </>
   )
 }
