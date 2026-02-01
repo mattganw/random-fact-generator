@@ -13,9 +13,19 @@
 .card-header {
     height: 40px;
     width: 100%;
-    background-color: red;
+    background-color: transparent;
     display: flex;
     place-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #f4f2f7;
+    padding-bottom: 5px;
+}
+
+.card-header-left, .card-header-right {
+    height: 100%;
+    display: flex;
+    place-items: center;
+    gap: 8px;
 }
 
 .card-footer {
@@ -25,19 +35,39 @@
     display: flex;
     place-items: center;
 }
+
+.header-text {
+    margin: 0px;
+    color: #6d4c9c;
+}
+
 .fact-text {
     margin: 0px;
+    margin-top: 10px;
     color: black;
     overflow-y: auto;
     flex: 1;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
-.google-sans-fact {
+.google-sans-p {
   line-height: 1.6;
   font-size: 1.2rem;
   font-family: "Google Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 0;
+}
+
+.google-sans-h2 {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-style: normal;
   font-variation-settings:
     "GRAD" 0;

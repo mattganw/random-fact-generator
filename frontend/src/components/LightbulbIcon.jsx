@@ -2,8 +2,8 @@ function LightbulbIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={64}
-      height={64}
+      width={30}
+      height={30}
       viewBox="0 0 512 512"
     >
       <path
