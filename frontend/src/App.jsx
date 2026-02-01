@@ -4,11 +4,13 @@ import FactCard from './components/FactCard.jsx'
 
 function App() {
 
-  const [fact, setFact] = useState(null)
+  const [randomFact, setRandomFact] = useState(null)
+  const [todayFact, setTodayFact] = useState(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  const getFact = async () => {
+  // get random fact
+  const getRandomFact = async () => {
     try {
       setLoading(true)
       setError(null)
@@ -20,7 +22,7 @@ function App() {
       }
 
       const data = await response.json()
-      setFact(data)
+      setRandomFact(data)
 
     } catch(err) {
       setError(err)
@@ -28,10 +30,35 @@ function App() {
     } finally {
       setLoading(false)
     }
-  }  
+  } 
+
+  // get today's fact
+  const getTodayFact = async () => {
+    try {
+      setLoading(true)
+      setError(null)
+
+      const response = await fetch("http://localhost:3000/api/today");
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error: ${response.status}`)
+      }
+
+      const data = await response.json();
+      setTodayFact(data)
+
+    } catch(err) {
+      setError(err)
+      console.error("failed to fetch today's fact: ", err)
+    } finally {
+      setLoading(false)
+    }
+  }
+  
 
   useEffect(() => {
-    getFact()
+    getRandomFact();
+    getTodayFact();
   }, [])
 
   if (loading) return <>Loading...</>
@@ -39,7 +66,7 @@ function App() {
 
   return (
     <>
-      {fact ? <FactCard fact={fact}/> : "No fact available"}
+      {randomFact ? <FactCard fact={randomFact}/> : "No fact available"}
     </>
   )
 }

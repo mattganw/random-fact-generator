@@ -11,10 +11,9 @@
 }
 
 .card-footer {
-    height: 40px;
+    height: 36px;
     width: 100%;
     background-color: var(--color-white);
-
 }
 .fact-text {
     margin: 0px;
