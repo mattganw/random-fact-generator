@@ -1,22 +1,31 @@
 .card {
     background-color: var(--color-secondary);
-    height: 250px;
+    height: 260px;
     width: 600px;
     border-radius: 14px;
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
+.card-footer {
+    height: 40px;
+    width: 100%;
+    background-color: var(--color-white);
+
+}
 .fact-text {
     margin: 0px;
     color: var(--color-white);
 }
 
 .google-sans-fact {
+  font-size: 24px;
   font-family: "Google Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-variation-settings:
     "GRAD" 0;
