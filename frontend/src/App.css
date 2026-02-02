@@ -1,6 +1,27 @@
+:root {
+    --color-primary: #1e223a;
+    --color-secondary: #625bc7;
+    --color-white: #f9f8fe;
+}
+
 body {
+    margin: 0px;
+    min-height: 100vh;
     display: grid;
     place-items: center;
-    margin: 0px;
-    height: 100vh;
+    background: linear-gradient(135deg, #fd8a47, #f384b8, #c189f8, #318dfc);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.skeleton {
+  background: #eee;
+  border-radius: 8px;
+  padding: 1rem;
+  min-height: 100px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
 }

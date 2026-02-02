@@ -1,0 +1,143 @@
+.card {
+    background-color: #fff;
+    height: 400px;
+    width: 600px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-header {
+    height: 40px;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    place-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #f4f2f7;
+    padding-bottom: 5px;
+}
+
+.card-header-left, .card-header-right {
+    height: 100%;
+    display: flex;
+    place-items: center;
+    gap: 8px;
+}
+
+.card-footer {
+    height: 40px;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.header-text {
+    margin: 0px;
+    color: #6d4c9c;
+}
+
+.fact-text {
+    margin: 0px;
+    margin-top: 10px;
+    color: black;
+    overflow-y: auto;
+    flex: 1;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.fact-content {
+    flex: 1
+}
+
+.google-sans-p {
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 0;
+}
+
+.google-sans-btn {
+  line-height: 1.0;
+  font-size: 1.0rem;
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 0;
+}
+
+.google-sans-h2 {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-family: "Google Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 0;
+}
+
+.new-fact-btn, .today-fact-btn {
+    display: flex;
+    place-items: center;
+    height: 100%;
+    width: auto;
+    gap: 4px;
+    color: white;
+    border: 0px;
+    border-radius: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.new-fact-btn {
+    background-color: #6d4c9c;
+    transition: transform 0.2s ease;
+}
+
+.new-fact-btn:hover {
+    transform: scale(1.1);
+}
+.today-fact-btn {
+    background-color: #3072e2;
+    transition: transform 0.2s ease;
+}
+.today-fact-btn:hover {
+    transform: scale(1.1);
+}
+
+.fact-content {
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.fact-content.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fact-content.loading {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.copy-div {
+  transition: transform 0.2s ease;
+}
+
+.copy-div.copied {
+  transform: scale(1.2);
+}
