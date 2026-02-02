@@ -70,7 +70,7 @@ function App() {
     getRandomFact();
   }, [])
 
-  if (error) return <>Error: {error.message}</>
+  if (error) return <p className="google-sans-p">Error: {error.message}</p>
 
   return (
     <>
@@ -83,7 +83,10 @@ function App() {
           onCopy={copyToClipboard}
           isLoading={loading}
         /> 
-        : "No fact available"}
+        : <div className="card skeleton">
+            <div className="card-header"></div>
+            <div className="fact-text"></div>
+          </div>}
     </>
   )
 }
