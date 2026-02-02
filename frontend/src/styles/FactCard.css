@@ -106,9 +106,18 @@
 
 .new-fact-btn {
     background-color: #6d4c9c;
+    transition: transform 0.2s ease;
+}
+
+.new-fact-btn:hover {
+    transform: scale(1.1);
 }
 .today-fact-btn {
     background-color: #3072e2;
+    transition: transform 0.2s ease;
+}
+.today-fact-btn:hover {
+    transform: scale(1.1);
 }
 
 .fact-content {
@@ -125,3 +134,10 @@
   transform: translateY(10px);
 }
 
+.copy-div {
+  transition: transform 0.2s ease;
+}
+
+.copy-div.copied {
+  transform: scale(1.2);
+}
